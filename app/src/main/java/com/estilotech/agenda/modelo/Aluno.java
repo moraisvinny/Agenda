@@ -62,6 +62,9 @@ public class Aluno implements Serializable {
     }
 
     public String getSite() {
+        if(!site.startsWith("http://")){
+            site = "http://" + site;
+        }
         return site;
     }
 
